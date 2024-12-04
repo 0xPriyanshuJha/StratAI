@@ -11,6 +11,9 @@ from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 from reportlab.lib.units import inch
 from reportlab.lib.colors import black
 import functools
+__import__('pysqlite3')
+import sys
+sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
 
 class AdvancedMarketResearchApp:
     def __init__(self, openai_api_key=None, serper_api_key=None):
@@ -202,8 +205,8 @@ def main():
     )
 
     # Title and description
-    st.title("🚀 AI Use Case Research Generator")
-    st.markdown("### Discover AI Transformation Opportunities")
+    st.title("StratAI")
+    st.markdown("### 🚀 AI Use Case Research Generator")
 
     # Input columns
     col1, col2 = st.columns(2)
@@ -287,8 +290,9 @@ def main():
     - Understand industry trends
     - Discover AI transformation opportunities
     - Find relevant implementation resources
-    
-    Powered by CrewAI and Open-Source Technologies
+    - Discover, Analyze, and Innovate with AI
+
+    Powered by CrewAI and OpenAI
     """)
 
 if __name__ == "__main__":
