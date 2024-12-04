@@ -1,4 +1,7 @@
 # necessary imports
+__import__('pysqlite3')
+import sys
+sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
 import streamlit as st
 import os
 import openai
@@ -12,9 +15,7 @@ from reportlab.lib.units import inch
 from reportlab.lib.colors import black
 import functools
 #rectifying the error
-__import__('pysqlite3')
-import sys
-sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+
 
 class AdvancedMarketResearchApp:
     def __init__(self, openai_api_key=None, serper_api_key=None):
