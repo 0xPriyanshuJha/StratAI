@@ -6,5 +6,4 @@ openai
 crewai_tools
 reportlab
 webdriver-manager
-serper
 serpapi
