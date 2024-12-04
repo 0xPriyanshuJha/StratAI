@@ -2,3 +2,5 @@ crewai
 streamlit
 langchain
 serpapi
+pysqlite3-binary
+chromadb>=0.4.0
